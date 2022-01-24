@@ -53,6 +53,20 @@ class LinkList {
     }
 
     func insert(position: Int, data: Int) {
+        if position == 0 {
+            addFront(data)
+            return
+        }
+        
+        let newNode = Node(data)
+        var currentNode = head
+        var count = 0
+        while count < position - 1 {
+            currentNode = currentNode?.next
+            count += 1
+        }
+        newNode.next = currentNode?.next
+        currentNode!.next = newNode
     }
     
     func deleteFirst() {
