@@ -105,10 +105,11 @@ class LinkList {
     }
     
     var isEmpty: Bool {
-        return false
+        head == nil
     }
     
     func clear() {
+        head = nil
     }
     
     func printLinkedList() {
@@ -162,3 +163,10 @@ linkedList.printLinkedList()
 
 linkedList.delete(at: 3)
 linkedList.printLinkedList()
+
+linkedList.isEmpty
+
+linkedList.clear()
+
+linkedList.isEmpty
+
