@@ -76,6 +76,7 @@ class LinkList {
     func deleteLast() {
         if head?.next == nil {
             head = nil
+            return
         }
         
         var previousNode = head
@@ -88,6 +89,19 @@ class LinkList {
     }
     
     func delete(at position: Int) {
+        if position == 0 {
+            deleteFirst()
+            return
+        }
+        var previousNode = head
+        var currentNode = previousNode?.next
+        var count = 0
+        while count < position - 1 {
+            previousNode = currentNode
+            currentNode = currentNode?.next
+            count += 1
+        }
+        previousNode?.next = currentNode?.next
     }
     
     var isEmpty: Bool {
@@ -126,6 +140,15 @@ linkedList.getFirst()
 linkedList.addBack(4)
 linkedList.printLinkedList()
 
+linkedList.addBack(9)
+linkedList.printLinkedList()
+
+linkedList.addBack(3)
+linkedList.printLinkedList()
+
+linkedList.addBack(7)
+linkedList.printLinkedList()
+
 linkedList.getLast()
 
 linkedList.insert(position: 2, data: 5)
@@ -137,11 +160,5 @@ linkedList.printLinkedList()
 linkedList.deleteLast()
 linkedList.printLinkedList()
 
-linkedList.deleteLast()
-linkedList.printLinkedList()
-
-linkedList.deleteLast()
-linkedList.printLinkedList()
-
-linkedList.deleteLast()
+linkedList.delete(at: 3)
 linkedList.printLinkedList()
