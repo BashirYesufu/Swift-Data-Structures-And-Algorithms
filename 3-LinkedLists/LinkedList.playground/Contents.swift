@@ -167,11 +167,20 @@ linkedList.printLinkedList()
 linkedList.deleteLast()
 linkedList.printLinkedList()
 
-linkedList.delete(at: 1)
-linkedList.printLinkedList()
-
 linkedList.deleteLast()
 linkedList.printLinkedList()
 
 linkedList.deleteLast()
 linkedList.printLinkedList()
+
+linkedList.deleteLast()
+linkedList.printLinkedList()
+
+//linkedList.delete(at: 1)
+//linkedList.printLinkedList()
+//
+//linkedList.deleteLast()
+//linkedList.printLinkedList()
+//
+//linkedList.deleteLast()
+//linkedList.printLinkedList()
